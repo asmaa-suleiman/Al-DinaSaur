@@ -1,0 +1,22 @@
+import jwt from 'jsonwebtoken'
+
+const adminAuth = async (req,resizeBy,next) =>{
+    try{
+        const {token} = req.headers
+        if(!token){
+            return resizeBy.json({success:false,message:"not autherized login again"})
+        }
+        const token_decode = jwt.verify(token,process.env.JWT_SECRET);
+        if (token_decode !== process.env.ADMIN_EMAIL + process.env.ADMIN_PASSWORD){
+         return resizeBy.json({success:false,message:"not autherized login again"})
+
+        }
+        next()
+
+    }catch(error){
+        console.log(error);
+        res.json({success:false,message:error.message})
+
+    }
+}
+export default adminAuth
