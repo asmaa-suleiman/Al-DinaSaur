@@ -1,29 +1,58 @@
-import React from 'react'
-import { assets } from '../assets/assets'
+import React from "react";
+import { assets } from "../assets/assets";
 
 const OurPolicy = () => {
   return (
-    <div className='flex flex-col sm:flex-row justify-around gap-12 sm:gap-2 text-center py-20 text-xs sm:text-sm md:text-base text-gray-700 '>
-       
-       <div>
-        <img src={assets.exchange} className='w-12 m-auto mb-5' alt="" />
-        <p className='font-semibold'> Easy Exchange Policy</p>
-        <p className='text-grap-400'>we offer hassle free exchange policy</p>
-       </div>
+    <div
+      dir="rtl"
+      className="flex flex-col sm:flex-row justify-around gap-12 sm:gap-2 text-center py-20 text-xs sm:text-sm md:text-base text-gray-700"
+    >
+      {/* Exchange Policy */}
+      <div>
+        <img
+          src={assets.exchange}
+          className="w-12 m-auto mb-5"
+          alt="سياسة الاستبدال"
+        />
 
-       <div>
-        <img src={assets.quality} className='w-12 m-auto mb-5' alt="" />
-        <p className='font-semibold'> 7 days return policy</p>
-        <p className='text-grap-400'>we offer 7 days free return policy</p>
-       </div>
+        <p className="font-semibold">استبدال خلال يوم واحد</p>
 
-       <div>
-        <img src={assets.support} className='w-12 m-auto mb-5' alt="" />
-        <p className='font-semibold'> Best customer support</p>
-        <p className='text-grap-400'>we provide 24/7 customer support</p>
-       </div>
+        <p className="text-gray-400">
+          يمكنك استبدال المنتج بمنتج آخر خلال يوم واحد
+        </p>
+      </div>
+
+      {/* Return Policy */}
+      <div>
+        <img
+          src={assets.quality}
+          className="w-12 m-auto mb-5"
+          alt="سياسة الإرجاع"
+        />
+
+        <p className="font-semibold">إرجاع خلال يوم واحد</p>
+
+        <p className="text-gray-400">
+          يمكنك إرجاع المنتج خلال يوم واحد من استلامه
+        </p>
+      </div>
+
+      {/* Quality */}
+      <div>
+        <img
+          src={assets.support}
+          className="w-12 m-auto mb-5"
+          alt="جودة المنتجات"
+        />
+
+        <p className="font-semibold">منتجات موثوقة</p>
+
+        <p className="text-gray-400">
+          نوفر لك أدوات ومنتجات مختارة بعناية وبجودة موثوقة
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default OurPolicy
+export default OurPolicy;

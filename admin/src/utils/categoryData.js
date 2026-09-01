@@ -1,39 +1,44 @@
 const categoryData = {
-  "Power Tools": [
-    "Drills",
-    "Impact Drivers",
-    "Angle Grinders",
-    "Circular Saws",
-    "Jigsaws",
+  "الادوات الكهربائية": [
+    "مقدح",
+    "كاوي",
+    "بلاور",
+    "جلخ",
+    "فرد شمع",
     "Sanders",
     "Routers",
     "Heat Guns"
   ],
 
-  "Hand Tools": [
-    "Hammers",
-    "Screwdrivers",
-    "Wrenches",
-    "Pliers",
-    "Sockets & Ratchets",
-    "Handsaws",
-    "Utility Knives"
+  "الادوات اليدوية": [
+    "شاكوش",
+    "مفك براغي",
+    "مفتاح انجليزي",
+    "بانسا",
+    "قطاعة",
+    "رفش",
+    "مكنسة"
   ],
 
-  "Safety Equipment": [
-    "Safety Glasses",
-    "Gloves",
-    "Helmets",
-    "Dust Masks",
-    "Safety Boots"
+  "معدات السلامة": [
+    "نظارات لحام",
+    "نظارات جلخ",
+    "كفوف",
+    
   ],
 
-  "Electrical Supplies": [
-    "Wires",
-    "Switches",
-    "Sockets",
-    "Circuit Breakers",
-    "Extension Cords"
+  "براغي و مستلزماتها": [
+    "برغي ستانلس",
+    "برغي فولاذ",
+    "برغي حديد",
+    "برغي الين",
+    "عزق"
+  ],
+    "مستلزمات الدهان": [
+    "فرشاية بويا",
+    "طساسات",
+    "ريش",
+   
   ]
 };
 
