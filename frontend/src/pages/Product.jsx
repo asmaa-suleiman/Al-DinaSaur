@@ -29,7 +29,7 @@ const Product = () => {
 
   useEffect(() => {
     fetchProductData();
-  }, [productId]);
+  }, [productId, products]);
 
   //whatsapp functionality
   const askOnWhatsApp = () => {
