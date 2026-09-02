@@ -41,11 +41,13 @@ import dropdown from './dropdown.png'
 import whatsapp_icon from "./whatsapp_icon.jpg";
 import Return from './Return.png'
 import replacement from './replacement.png'
+import contactus from './contactus.jpg'
 
 
 
 
 export const assets = {
+  contactus,
   Return,
   replacement,
   whatsapp_icon,
