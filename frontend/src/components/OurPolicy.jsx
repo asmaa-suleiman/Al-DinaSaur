@@ -10,7 +10,7 @@ const OurPolicy = () => {
       {/* Exchange Policy */}
       <div>
         <img
-          src={assets.exchange}
+          src={assets.replacement}
           className="w-12 m-auto mb-5"
           alt="سياسة الاستبدال"
         />
@@ -25,7 +25,7 @@ const OurPolicy = () => {
       {/* Return Policy */}
       <div>
         <img
-          src={assets.quality}
+          src={assets.Return}
           className="w-12 m-auto mb-5"
           alt="سياسة الإرجاع"
         />
@@ -40,7 +40,7 @@ const OurPolicy = () => {
       {/* Quality */}
       <div>
         <img
-          src={assets.support}
+          src={assets.quality}
           className="w-12 m-auto mb-5"
           alt="جودة المنتجات"
         />

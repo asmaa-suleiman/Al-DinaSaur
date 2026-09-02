@@ -31,6 +31,30 @@ const Product = () => {
     fetchProductData();
   }, [productId]);
 
+  //whatsapp functionality
+  const askOnWhatsApp = () => {
+    const phoneNumber = "96103011006";
+
+    const productUrl = window.location.href;
+
+    const message = `
+مرحباً، لدي سؤال عن هذا المنتج:
+
+${productData.name}
+
+السعر: $${productData.price}
+
+رابط المنتج:
+${productUrl}
+`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message,
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   return productData ? (
     <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
       {/*------------- product data --------------*/}
@@ -61,16 +85,6 @@ const Product = () => {
         <div className="flex-1">
           <h1 className="font-medium text-2xl mt-2">{productData.name}</h1>
 
-          <div className="flex items-center gap-1 mt-2">
-            <img className="w-3.5" src={assets.star} alt="" />
-            <img className="w-3.5" src={assets.star} alt="" />
-            <img className="w-3.5" src={assets.star} alt="" />
-            <img className="w-3.5" src={assets.star} alt="" />
-            <img className="w-3.5" src={assets.star} alt="" />
-
-            <p className="pl-2">(122)</p>
-          </div>
-
           <p className="mt-5 text-3xl font-medium">
             {currency}
             {productData.price}
@@ -84,9 +98,19 @@ const Product = () => {
 
           <button
             onClick={() => addToCart(productData._id)}
-            className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700"
+            className="bg-black mb-2 text-white px-8 py-3 text-sm active:bg-gray-700"
           >
             أضف إلى السلة
+          </button>
+
+          {/*whatsapp button  */}
+          <button
+            onClick={askOnWhatsApp}
+            className="flex items-center gap-2 border border-gray-300 px-5 py-2.5 rounded-md text-sm font-medium hover:bg-gray-50 transition"
+          >
+            <img src={assets.whatsapp_icon} alt="واتساب" className="w-6 h-6" />
+
+            <span>اسأل عن المنتج عبر واتساب</span>
           </button>
 
           <hr className="mt-8 sm:w-4/5" />
@@ -121,11 +145,12 @@ const Product = () => {
         </div>
       </div>
 
-      {/* -------------------display latest products ----------*/}
+      {/* -------------------display related products ----------*/}
 
       <RelatedProducts
         category={productData.category}
         subCategory={productData.subCategory}
+        productId={productData._id}
       />
     </div>
   ) : (

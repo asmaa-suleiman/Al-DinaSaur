@@ -38,11 +38,17 @@ import back from './back.png'
 import outPic from './outPic.webp'
 import cross from './cross.png'
 import dropdown from './dropDown.png'
+import whatsapp_icon from "./whatsapp_icon.jpg";
+import Return from './Return.png'
+import replacement from './replacement.png'
 
 
 
 
 export const assets = {
+  Return,
+  replacement,
+  whatsapp_icon,
     cross,
     dropdown,
     back,
